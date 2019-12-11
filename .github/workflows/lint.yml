@@ -9,4 +9,4 @@ jobs:
       - uses: cloudposse/build-harness@master
         with:
           entrypoint: /usr/bin/make
-          args: init packages/install/terraform:0.12 readme/lint
+          args: init packages/install/terraform:0.12.19 readme/lint
