@@ -2,11 +2,11 @@ name: lint
 on: [push]
 jobs:
   build:
-    name: 'Lint README.md'
+    name: "Lint README.md"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: cloudposse/build-harness@master
-      with:
-        entrypoint: /usr/bin/make
-        args: readme/lint
+      - uses: actions/checkout@master
+      - uses: cloudposse/build-harness@master
+        with:
+          entrypoint: /usr/bin/make
+          args: init packages/install/terraform readme/lint
