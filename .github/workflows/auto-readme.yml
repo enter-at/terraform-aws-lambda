@@ -1,4 +1,4 @@
-name: "auto-readme"
+name: "Generate Readme"
 
 on:
   # Open a PR to update README on merge to master (as necessary)

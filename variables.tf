@@ -49,13 +49,8 @@ variable "handler" {
 
 variable "reserved_concurrent_executions" {
   type        = number
-  description = <<DESC
-    (Optional) The amount of reserved concurrent executions for this lambda function.
-    A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations.
-    Defaults to Unreserved Concurrency Limits -1.
-  DESC
-
-  default = null
+  description = "(Optional) The amount of reserved concurrent executions for this lambda function."
+  default     = null
 }
 
 variable "dead_letter_config" {
@@ -91,14 +86,7 @@ variable "tracing_config" {
     mode = string
   })
 
-  description = <<DESC
-    is a child block with a single argument:
-
-    mode - (Required) Can be either PassThrough or Active.
-      If PassThrough, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1".
-      If Active, Lambda will respect any tracing header it receives from an upstream service.
-      If no tracing header is received, Lambda will call X-Ray for a tracing decision.
-  DESC
+  description = "(Optional) A child block with a single argument mode"
   default     = null
 }
 
