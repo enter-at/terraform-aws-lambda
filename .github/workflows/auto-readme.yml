@@ -18,8 +18,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@master
       - name: readme/update
         shell: bash
         env:

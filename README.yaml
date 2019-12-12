@@ -27,7 +27,7 @@ github_repo: enter-at/terraform-aws-lambda
 # Badges to display
 badges:
   - name: "Build Status"
-    image: "https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg"
+    image: "https://github.com/enter-at/terraform-aws-lambda/workflows/Lint/badge.svg"
     url: "https://github.com/enter-at/terraform-aws-lambda/actions"
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg"
@@ -54,7 +54,6 @@ usage: |-
     source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
     function_name = "test-service"
     handler       = "service/handler"
-    dist_dir      = var.dist_dir
     source_dir    = var.source_dir
     runtime       = var.runtime
 
@@ -74,7 +73,6 @@ usage: |-
     source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
     function_name = "test-service"
     handler       = "${local.service_dir}/handler"
-    dist_dir      = var.dist_dir
     source_dir    = var.source_dir
     runtime       = var.runtime
     layers        = var.layers
