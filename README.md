@@ -105,5 +105,5 @@ See [LICENSE](LICENSE) for full details.
 
 
 
-  [logo]: https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo.svg
+  [logo]: https://res.cloudinary.com/enter-at/image/upload/c_scale,w_163/v1576145406/static/logo-svg.svg
   [website]: https://github.com/enter-at
