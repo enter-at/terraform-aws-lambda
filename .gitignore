@@ -30,3 +30,4 @@ override.tf.json
 
 .build-harness
 build-harness
+.README.md.gotmpl
