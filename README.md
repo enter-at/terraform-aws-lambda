@@ -10,9 +10,9 @@
 
   -->
 
-[![enter-at][logo]][website]
+[<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100">][website]
 
-# terraform-aws-lambda
+# terraform-aws-lambda [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
 Terraform module designed to facilitate the creation of AWS Lambda functions.
@@ -35,9 +35,65 @@ Instead pin to the release tag (e.g. `?ref=tags/x.y.z`) of one of our [latest re
 
 
 ### Simple Example
+
 ```hcl
 module "lambda" {
-  source     = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
+  source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
+  function_name = "test-service"
+  handler       = "service/handler"
+  dist_dir      = var.dist_dir
+  source_dir    = var.source_dir
+  runtime       = var.runtime
+
+  rsync_pattern = [
+    "--include=*.js"
+  ]
+}
+```
+### Advanced Example
+
+```hcl
+locals {
+  service_dir = "account-data"
+}
+
+module "lambda" {
+  source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
+  function_name = "test-service"
+  handler       = "${local.service_dir}/handler"
+  dist_dir      = var.dist_dir
+  source_dir    = var.source_dir
+  runtime       = var.runtime
+  layers        = var.layers
+
+  rsync_pattern = [
+    "--include=lib/",
+    "--include=domain/",
+    "--include=${local.service_dir}/",
+    "--include=*.js"
+  ]
+
+  policy = {
+    json = data.aws_iam_policy_document.main.json
+  }
+
+  environment = {
+    variables = {
+      SM_SERVICE_CONFIG = var.pfs_secrets_manager_secret.arn
+    }
+  }
+
+  vpc_config = {
+    subnet_ids = var.private_subnet_ids
+
+    security_group_ids = [
+      var.security_group_id
+    ]
+  }
+
+  tags = {
+    "Team" = "XYZ"
+  }
 }
 ```
 
@@ -45,6 +101,22 @@ module "lambda" {
 
 
 
+
+
+
+
+## Share the Love
+
+Like this project? Please give it a ★ on [our GitHub](https://github.com/enter-at/terraform-aws-lambda)! (it helps us **a lot**)
+
+Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
+
+
+## Related Projects
+
+Check out these related projects.
+
+- [terraform-newrelic-alert-lambda](https://github.com/enter-at/terraform-newrelic-alert-lambda) - Terraform Module to define New Relic alerts for AWS Lambda functions.
 
 
 
@@ -104,6 +176,14 @@ See [LICENSE](LICENSE) for full details.
 
 
 
+### Contributors
 
-  [logo]: https://res.cloudinary.com/enter-at/image/upload/c_scale,w_163/v1576145406/static/logo-svg.svg
+|  [![Steffen Leistner][sleistner_avatar]][sleistner_homepage]<br/>[Steffen Leistner][sleistner_homepage] |
+|---|
+
+  [sleistner_homepage]: https://github.com/sleistner
+
+
+
+
   [website]: https://github.com/enter-at
