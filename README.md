@@ -10,9 +10,16 @@
 
   -->
 
+
 [<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100">][website]
 
-# terraform-aws-lambda [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
+# terraform-aws-lambda
+
+
+
+
+ [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
 Terraform module designed to facilitate the creation of AWS Lambda functions.
@@ -127,9 +134,9 @@ module "lambda" {
 
 | Name | Description |
 |------|-------------|
-| arn | - |
+| arn | The Amazon Resource Name (ARN) identifying the Lambda function. |
 | function_name | - |
-| invoke_arn | - |
+| invoke_arn | The ARN to be used for invoking the Lambda function |
 | role_arn | The ARN of the IAM role created for the Lambda function |
 | role_name | The name of the IAM role created for the Lambda function |
 
@@ -213,7 +220,7 @@ See [LICENSE](LICENSE) for full details.
 |---|
 
   [sleistner_homepage]: https://github.com/sleistner
-
+  [sleistner_avatar]: https://res.cloudinary.com/enter-at/image/fetch/w_150,h_150,c_thumb/https://github.com/sleistner.png
 
 
 

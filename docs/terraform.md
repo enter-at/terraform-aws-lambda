@@ -23,9 +23,9 @@
 
 | Name | Description |
 |------|-------------|
-| arn | - |
+| arn | The Amazon Resource Name (ARN) identifying the Lambda function. |
 | function_name | - |
-| invoke_arn | - |
+| invoke_arn | The ARN to be used for invoking the Lambda function |
 | role_arn | The ARN of the IAM role created for the Lambda function |
 | role_name | The name of the IAM role created for the Lambda function |
 
