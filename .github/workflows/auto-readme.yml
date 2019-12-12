@@ -38,4 +38,4 @@ jobs:
             This is an auto-generated PR which updates the `README.md` from the `README.yaml`
             using the [`cloudposse/build-harness`](https://github.com/cloudposse/build-harness).
           PULL_REQUEST_BRANCH: github-actions/auto-readme
-          BRANCH_SUFFIX: none
+          BRANCH_SUFFIX: timestamp
