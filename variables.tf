@@ -1,50 +1,60 @@
-variable "dist_dir" {
-  type = string
-}
-
 variable "rsync_pattern" {
-  type = list(string)
+  type        = list(string)
+  description = "(Optional) A list of rsync pattern to include or exclude files and directories."
+
+  default = [
+    "--include=*"
+  ]
 }
 
 variable "source_dir" {
-  type = string
+  type        = string
+  description = "(Required) The location of the handler source code."
 }
 
 variable "description" {
-  type    = string
-  default = null
+  type        = string
+  description = "(Optional) Description of what your Lambda Function does."
+  default     = null
 }
 
 variable "layers" {
-  type    = list(string)
-  default = null
+  type = list(string)
+
+  description = "(Optional) List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function."
+  default     = null
 }
 
 variable "memory_size" {
-  type    = number
-  default = null
+  type        = number
+  description = "(Optional) Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128."
+  default     = 128
 }
 
 variable "timeout" {
-  type    = number
-  default = 3
+  type        = number
+  description = "(Optional) The amount of time your Lambda Function has to run in seconds. Defaults to 3."
+  default     = 3
 }
 
 variable "function_name" {
-  type = string
+  type        = string
+  description = "(Required) A unique name for your Lambda Function."
 }
 
 variable "handler" {
-  type = string
+  type        = string
+  description = "(Required) The function entrypoint in your code."
 }
 
 variable "reserved_concurrent_executions" {
-  type    = number
-  default = null
-}
+  type        = number
+  description = <<DESC
+    (Optional) The amount of reserved concurrent executions for this lambda function.
+    A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations.
+    Defaults to Unreserved Concurrency Limits -1.
+  DESC
 
-variable "tags" {
-  type    = map(string)
   default = null
 }
 
@@ -53,7 +63,8 @@ variable "dead_letter_config" {
     target_arn = string
   })
 
-  default = null
+  description = "(Optional) Nested block to configure the function's dead letter queue."
+  default     = null
 }
 
 variable "vpc_config" {
@@ -62,7 +73,8 @@ variable "vpc_config" {
     subnet_ids         = list(string)
   })
 
-  default = null
+  description = "(Optional) Provide this to allow your function to access your VPC."
+  default     = null
 }
 
 variable "environment" {
@@ -70,7 +82,8 @@ variable "environment" {
     variables = map(string)
   })
 
-  default = null
+  description = "(Optional) The Lambda environment's configuration settings."
+  default     = null
 }
 
 variable "tracing_config" {
@@ -78,7 +91,15 @@ variable "tracing_config" {
     mode = string
   })
 
-  default = null
+  description = <<DESC
+    is a child block with a single argument:
+
+    mode - (Required) Can be either PassThrough or Active.
+      If PassThrough, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1".
+      If Active, Lambda will respect any tracing header it receives from an upstream service.
+      If no tracing header is received, Lambda will call X-Ray for a tracing decision.
+  DESC
+  default     = null
 }
 
 variable "policy" {
@@ -86,15 +107,18 @@ variable "policy" {
     json = string
   })
 
-  description = "An additional policy to attach to the Lambda function role"
+  description = "(Optional) An additional policy to attach to the Lambda function role."
   default     = null
 }
 
 variable "runtime" {
-  type = string
+  type        = string
+  description = "(Required) The identifier of the function's runtime."
 }
 
-variable "nr_alert_policy_id" {
-  type    = string
-  default = null
+variable "tags" {
+  type = map(string)
+
+  description = "(Optional) A mapping of tags to assign to the object."
+  default     = null
 }

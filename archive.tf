@@ -2,13 +2,13 @@ resource "random_uuid" "id" {}
 
 data "null_data_source" "dist" {
   inputs = {
-    directory = "${var.dist_dir}/lambda/${random_uuid.id.result}"
+    path = "${path.module}/dist/${random_uuid.id.result}"
   }
 }
 
 data "null_data_source" "archive" {
   inputs = {
-    filename = "${var.dist_dir}/${random_uuid.id.result}.zip"
+    path = "${data.null_data_source.dist.outputs.path}.zip"
   }
 }
 
@@ -18,10 +18,10 @@ resource "null_resource" "build" {
   }
 
   provisioner "local-exec" {
-    command     = "${path.module}/build.sh"
+    command = "${path.module}/build.sh"
     environment = {
       SOURCE_DIR    = var.source_dir
-      DIST_DIR      = data.null_data_source.dist.outputs.directory
+      DIST_DIR      = data.null_data_source.dist.outputs.path
       RSYNC_PATTERN = join(" ", var.rsync_pattern)
     }
   }
@@ -29,8 +29,8 @@ resource "null_resource" "build" {
 
 data "archive_file" "function" {
   type        = "zip"
-  source_dir  = data.null_data_source.dist.outputs.directory
-  output_path = data.null_data_source.archive.outputs.filename
+  source_dir  = data.null_data_source.dist.outputs.path
+  output_path = data.null_data_source.archive.outputs.path
 
   depends_on = [
     null_resource.build
