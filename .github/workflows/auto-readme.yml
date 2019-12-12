@@ -1,4 +1,4 @@
-name: "Generate Readme"
+name: Generate Readme
 
 on:
   # Open a PR to update README on merge to master (as necessary)
@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+
       - name: readme/update
         shell: bash
         env:
@@ -28,6 +29,7 @@ jobs:
           make init
           make readme/deps
           make readme
+
       - name: Create Pull Request
         uses: cloudposse/actions/github/create-pull-request@0.4.0
         with:
