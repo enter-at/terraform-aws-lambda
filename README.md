@@ -11,12 +11,15 @@
   -->
 
 
-[<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100" align="left">][website]
+[<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100">][website]
+
+
+# terraform-aws-lambda
 
 
 
 
-# terraform-aws-lambda [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+ [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Lint/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
 Terraform module designed to facilitate the creation of AWS Lambda functions.
@@ -45,7 +48,6 @@ module "lambda" {
   source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
   function_name = "test-service"
   handler       = "service/handler"
-  dist_dir      = var.dist_dir
   source_dir    = var.source_dir
   runtime       = var.runtime
 
@@ -65,7 +67,6 @@ module "lambda" {
   source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
   function_name = "test-service"
   handler       = "${local.service_dir}/handler"
-  dist_dir      = var.dist_dir
   source_dir    = var.source_dir
   runtime       = var.runtime
   layers        = var.layers
@@ -142,9 +143,8 @@ module "lambda" {
 
 ## Share the Love
 
-Like this project? Please give it a ★ on [our GitHub](https://github.com/enter-at/terraform-aws-lambda)! (it helps us **a lot**)
-
-Are you using this project or any of our other projects? Consider [leaving a testimonial][testimonial]. =)
+Like this project? 
+Please give it a ★ on [our GitHub](https://github.com/enter-at/terraform-aws-lambda)!
 
 
 ## Related Projects
@@ -217,7 +217,7 @@ See [LICENSE](LICENSE) for full details.
 |---|
 
   [sleistner_homepage]: https://github.com/sleistner
-  [sleistner_avatar]: https://res.cloudinary.com/enter-at/image/fetch/w_150,h_150,c_thumb/https://github.com/sleistner.png
+  [sleistner_avatar]: https://res.cloudinary.com/enter-at/image/fetch/w_100,h_100,c_thumb/https://github.com/sleistner.png
 
 
 
