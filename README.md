@@ -11,15 +11,12 @@
   -->
 
 
-[<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100">][website]
-
-
-# terraform-aws-lambda
+[<img src="https://res.cloudinary.com/enter-at/image/upload/v1576145406/static/logo-svg.svg" alt="enter-at" width="100" align="left">][website]
 
 
 
 
- [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# terraform-aws-lambda [![Build Status](https://github.com/enter-at/terraform-aws-lambda/workflows/Release/badge.svg)](https://github.com/enter-at/terraform-aws-lambda/actions) [![Latest Release](https://img.shields.io/github/release/enter-at/terraform-aws-lambda.svg)](https://github.com/enter-at/terraform-aws-lambda/releases/latest) [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
 Terraform module designed to facilitate the creation of AWS Lambda functions.
