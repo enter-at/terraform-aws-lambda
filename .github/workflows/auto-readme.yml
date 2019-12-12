@@ -6,10 +6,6 @@ on:
     branches:
       - master
 
-  # Open a PR to update README for all PRs (as necessary)
-  pull_request:
-    types: [opened, synchronize, reopened]
-
   # Update README nightly
   schedule:
     - cron: "0 0 * * *"
@@ -31,7 +27,7 @@ jobs:
           make readme
 
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@0.4.0
+        uses: cloudposse/actions/github/create-pull-request@master
         with:
           labels: automated pr
         env:
