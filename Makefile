@@ -7,6 +7,6 @@ export TERRAFORM_VERSION ?= 0.12.18
 -include $(shell curl -sSL -o .build-harness "https://git.io/build-harness"; echo .build-harness)
 
 ## Lint terraform code
-lint: packages/install/terraform
+lint:
 	$(SELF) terraform/install terraform/get-modules terraform/get-plugins terraform/lint
 # terraform/validate
