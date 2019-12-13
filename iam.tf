@@ -106,7 +106,7 @@ resource "aws_iam_policy" "additional" {
 resource "aws_iam_policy_attachment" "additional" {
   count      = var.policy == null ? 0 : 1
   name       = var.function_name
-  policy_arn = aws_iam_policy.additional.arn
+  policy_arn = aws_iam_policy.additional[0].arn
 
   roles = [
     aws_iam_role.main.name
