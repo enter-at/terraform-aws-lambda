@@ -2,7 +2,7 @@ resource "random_uuid" "id" {}
 
 data "null_data_source" "dist" {
   inputs = {
-    path = "${path.module}/dist/${random_uuid.id.result}"
+    path = abspath("${path.module}/dist/${random_uuid.id.result}")
   }
 }
 
