@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.1...v1.2.2) (2019-12-13)
+
+
+### Bug Fixes
+
+* **iam:** make addtional policy optional ([012ef4b](https://github.com/enter-at/terraform-aws-lambda/commit/012ef4b99db420578c231381f3e9c975205a142e))
+
 ## [1.2.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.0...v1.2.1) (2019-12-13)
 
 
