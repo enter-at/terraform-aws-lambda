@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.0.2...v1.1.0) (2019-12-13)
+
+
+### Features
+
+* **output:** expose function timeout ([1b8b9e4](https://github.com/enter-at/terraform-aws-lambda/commit/1b8b9e4960e3f2881cf0490a93b3f8494e7ee1ac))
+
 ## [1.0.2](https://github.com/enter-at/terraform-aws-lambda/compare/v1.0.1...v1.0.2) (2019-12-12)
 
 
