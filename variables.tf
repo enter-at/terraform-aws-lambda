@@ -116,3 +116,14 @@ variable "tags" {
   description = "(Optional) A mapping of tags to assign to the object."
   default     = null
 }
+
+variable "cloudwatch_log_subscription_filter" {
+  type = list(object({
+    name            = string
+    filter_pattern  = string
+    destination_arn = string
+  }))
+
+  description = "(Optional) A list of CloudWatch Logs subscription filter."
+  default = null
+}
