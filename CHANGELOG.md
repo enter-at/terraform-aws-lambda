@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.1.0...v1.1.1) (2019-12-13)
+
+
+### Bug Fixes
+
+* **archive:** ensure dist absolute path ([7462906](https://github.com/enter-at/terraform-aws-lambda/commit/7462906a02a949fe3bb755bf228892c0fb34d0b2))
+
 # [1.1.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.0.2...v1.1.0) (2019-12-13)
 
 
