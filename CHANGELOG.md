@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.3.0...v1.3.1) (2019-12-13)
+
+
+### Bug Fixes
+
+* **main:** subscription filter count ([6e0e1a3](https://github.com/enter-at/terraform-aws-lambda/commit/6e0e1a3ff7648219360a0dadce86dc32d6c7ebd5))
+
 # [1.3.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.3...v1.3.0) (2019-12-13)
 
 
