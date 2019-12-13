@@ -104,6 +104,7 @@ module "lambda" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| cloudwatch_log_subscription_filter | (Optional) A list of CloudWatch Logs subscription filter. | object | `null` | no |
 | dead_letter_config | (Optional) Nested block to configure the function's dead letter queue. | object | `null` | no |
 | description | (Optional) Description of what the Lambda function does. | string | `null` | no |
 | environment | (Optional) The Lambda environment's configuration settings. | object | `null` | no |
