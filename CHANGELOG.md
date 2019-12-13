@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.1.1...v1.2.0) (2019-12-13)
+
+
+### Features
+
+* **iam:** add force_detach_policies variable ([433c8b2](https://github.com/enter-at/terraform-aws-lambda/commit/433c8b2f81876fc7439924b9c24f9382789e5330))
+
 ## [1.1.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.1.0...v1.1.1) (2019-12-13)
 
 
