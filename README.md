@@ -107,6 +107,7 @@ module "lambda" {
 | dead_letter_config | (Optional) Nested block to configure the function's dead letter queue. | object | `null` | no |
 | description | (Optional) Description of what the Lambda function does. | string | `null` | no |
 | environment | (Optional) The Lambda environment's configuration settings. | object | `null` | no |
+| force_detach_policies | (Optional) Specifies to force detaching any policies the role has before destroying it. Defaults to false. | bool | `false` | no |
 | function_name | (Required) A unique name for the Lambda function. | string | - | yes |
 | handler | (Required) The function entrypoint in your code. | string | - | yes |
 | layers | (Optional) List of Lambda Layer Version ARNs (maximum of 5) to attach to the Lambda function. | list(string) | `null` | no |
