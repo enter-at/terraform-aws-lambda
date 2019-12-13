@@ -125,5 +125,5 @@ variable "cloudwatch_log_subscription_filter" {
   }))
 
   description = "(Optional) A list of CloudWatch Logs subscription filter."
-  default = null
+  default     = null
 }
