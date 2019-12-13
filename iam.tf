@@ -98,11 +98,13 @@ resource "aws_iam_policy_attachment" "dead_letter" {
 # Attach an additional policy if provided.
 
 resource "aws_iam_policy" "additional" {
+  count  = var.policy == null ? 0 : 1
   name   = var.function_name
   policy = var.policy.json
 }
 
 resource "aws_iam_policy_attachment" "additional" {
+  count      = var.policy == null ? 0 : 1
   name       = var.function_name
   policy_arn = aws_iam_policy.additional.arn
 
