@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.3...v1.3.0) (2019-12-13)
+
+
+### Features
+
+* **main:** add cloudwatch log subscription filter ([2bc7af3](https://github.com/enter-at/terraform-aws-lambda/commit/2bc7af38895b6a631955fa51b4477b4905a13b5f))
+
 ## [1.2.3](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.2...v1.2.3) (2019-12-13)
 
 
