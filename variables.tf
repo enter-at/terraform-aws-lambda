@@ -14,32 +14,32 @@ variable "source_dir" {
 
 variable "description" {
   type        = string
-  description = "(Optional) Description of what your Lambda Function does."
+  description = "(Optional) Description of what the Lambda function does."
   default     = null
 }
 
 variable "layers" {
   type = list(string)
 
-  description = "(Optional) List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function."
+  description = "(Optional) List of Lambda Layer Version ARNs (maximum of 5) to attach to the Lambda function."
   default     = null
 }
 
 variable "memory_size" {
   type        = number
-  description = "(Optional) Amount of memory in MB your Lambda Function can use at runtime. Defaults to 128."
+  description = "(Optional) Amount of memory in MB the Lambda function can use at runtime. Defaults to 128."
   default     = 128
 }
 
 variable "timeout" {
   type        = number
-  description = "(Optional) The amount of time your Lambda Function has to run in seconds. Defaults to 3."
+  description = "(Optional) The amount of time the Lambda function has to run in seconds. Defaults to 3."
   default     = 3
 }
 
 variable "function_name" {
   type        = string
-  description = "(Required) A unique name for your Lambda Function."
+  description = "(Required) A unique name for the Lambda function."
 }
 
 variable "handler" {
@@ -49,7 +49,7 @@ variable "handler" {
 
 variable "reserved_concurrent_executions" {
   type        = number
-  description = "(Optional) The amount of reserved concurrent executions for this lambda function."
+  description = "(Optional) The amount of reserved concurrent executions for this Lambda function."
   default     = null
 }
 
@@ -68,7 +68,7 @@ variable "vpc_config" {
     subnet_ids         = list(string)
   })
 
-  description = "(Optional) Provide this to allow your function to access your VPC."
+  description = "(Optional) Provide this to allow your function to access the VPC."
   default     = null
 }
 
