@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.2.0...v1.2.1) (2019-12-13)
+
+
+### Bug Fixes
+
+* **ima:** apply terraform fmt ([71c8693](https://github.com/enter-at/terraform-aws-lambda/commit/71c8693fe708cb742608415e7052e6e61f67e1b9))
+
 # [1.2.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.1.1...v1.2.0) (2019-12-13)
 
 
