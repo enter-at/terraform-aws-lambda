@@ -9,7 +9,13 @@ output "invoke_arn" {
 }
 
 output "function_name" {
-  value = aws_lambda_function.main.function_name
+  description = "The name identifying the Lambda function."
+  value       = aws_lambda_function.main.function_name
+}
+
+output "function_timeout" {
+  description = "The amount of time the Lambda function can run in seconds."
+  value       = aws_lambda_function.main.timeout
 }
 
 output "role_arn" {
