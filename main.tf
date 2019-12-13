@@ -17,7 +17,7 @@ resource "aws_cloudwatch_log_group" "main" {
 }
 
 resource "aws_cloudwatch_log_subscription_filter" "main" {
-  count          = var.cloudwatch_log_subscription_filter == null ? 0 : count(var.cloudwatch_log_subscription_filter)
+  count          = var.cloudwatch_log_subscription_filter == null ? 0 : length(var.cloudwatch_log_subscription_filter)
   log_group_name = local.lambda_log_group_name
 
   name            = "${var.function_name}-${var.cloudwatch_log_subscription_filter[count.index].name}"
