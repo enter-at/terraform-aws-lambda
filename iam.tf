@@ -1,12 +1,14 @@
 data "aws_iam_policy_document" "assume_role" {
   statement {
-    effect  = "Allow"
+    effect = "Allow"
+
     actions = [
       "sts:AssumeRole"
     ]
 
     principals {
-      type        = "Service"
+      type = "Service"
+
       identifiers = [
         "lambda.amazonaws.com"
       ]
@@ -17,8 +19,8 @@ data "aws_iam_policy_document" "assume_role" {
 resource "aws_iam_role" "main" {
   name                  = var.function_name
   assume_role_policy    = data.aws_iam_policy_document.assume_role.json
-  tags                  = var.tags
   force_detach_policies = var.force_detach_policies
+  tags                  = var.tags
 }
 
 # Attach a policy for logs.
@@ -49,10 +51,11 @@ resource "aws_iam_policy" "logs" {
 
 resource "aws_iam_policy_attachment" "logs" {
   name       = "${var.function_name}-logs"
-  roles      = [
+  policy_arn = aws_iam_policy.logs.arn
+
+  roles = [
     aws_iam_role.main.name
   ]
-  policy_arn = aws_iam_policy.logs.arn
 }
 
 # Attach an additional policy required for the dead letter config.
@@ -85,10 +88,11 @@ resource "aws_iam_policy_attachment" "dead_letter" {
   count = var.dead_letter_config == null ? 0 : 1
 
   name       = "${var.function_name}-dl"
-  roles      = [
+  policy_arn = aws_iam_policy.dead_letter[0].arn
+
+  roles = [
     aws_iam_role.main.name
   ]
-  policy_arn = aws_iam_policy.dead_letter[0].arn
 }
 
 # Attach an additional policy if provided.
@@ -100,8 +104,9 @@ resource "aws_iam_policy" "additional" {
 
 resource "aws_iam_policy_attachment" "additional" {
   name       = var.function_name
-  roles      = [
+  policy_arn = aws_iam_policy.additional.arn
+
+  roles = [
     aws_iam_role.main.name
   ]
-  policy_arn = aws_iam_policy.additional.arn
 }
