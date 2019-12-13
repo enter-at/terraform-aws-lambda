@@ -146,6 +146,7 @@ Please give it a ★ on [our GitHub](https://github.com/enter-at/terraform-aws-l
 
 Check out these related projects.
 
+- [terraform-aws-lambda-layer](https://github.com/enter-at/terraform-aws-lambda-layer) - Terraform module designed to facilitate the creation of AWS Lambda layers.
 - [terraform-newrelic-alert-lambda](https://github.com/enter-at/terraform-newrelic-alert-lambda) - Terraform Module to define New Relic alerts for AWS Lambda functions.
 
 
