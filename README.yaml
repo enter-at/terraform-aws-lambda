@@ -37,6 +37,9 @@ badges:
     url: "https://github.com/semantic-release/semantic-release"
 
 related:
+  - name: "terraform-aws-lambda-layer"
+    description: "Terraform module designed to facilitate the creation of AWS Lambda layers."
+    url: "https://github.com/enter-at/terraform-aws-lambda-layer"
   - name: "terraform-newrelic-alert-lambda"
     description: "Terraform Module to define New Relic alerts for AWS Lambda functions."
     url: "https://github.com/enter-at/terraform-newrelic-alert-lambda"
