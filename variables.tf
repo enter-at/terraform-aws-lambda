@@ -99,6 +99,12 @@ variable "policy" {
   default     = null
 }
 
+variable "force_detach_policies" {
+  type        = bool
+  description = "(Optional) Specifies to force detaching any policies the role has before destroying it. Defaults to false."
+  default     = false
+}
+
 variable "runtime" {
   type        = string
   description = "(Required) The identifier of the function's runtime."
