@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.4.0...v1.4.1) (2019-12-15)
+
+
+### Bug Fixes
+
+* **iam:** add create log stream statement ([0c0a141](https://github.com/enter-at/terraform-aws-lambda/commit/0c0a141f06800dd0344720f5b7f1f154b404b47d))
+
 # [1.4.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.3.1...v1.4.0) (2019-12-15)
 
 
