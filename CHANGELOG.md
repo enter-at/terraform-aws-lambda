@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.4.1...v1.5.0) (2019-12-15)
+
+
+### Features
+
+* **rsync:** support brace expansion ([09ed65e](https://github.com/enter-at/terraform-aws-lambda/commit/09ed65e9d16f9117fc1187f55801bea5548802f1))
+
 ## [1.4.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.4.0...v1.4.1) (2019-12-15)
 
 
