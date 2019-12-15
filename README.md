@@ -45,7 +45,7 @@ module "lambda" {
   runtime       = var.runtime
 
   rsync_pattern = [
-    "--include=*.js"
+    "--include='*.js'"
   ]
 }
 ```
@@ -65,10 +65,8 @@ module "lambda" {
   layers        = var.layers
 
   rsync_pattern = [
-    "--include=lib/",
-    "--include=domain/",
-    "--include=${local.service_dir}/",
-    "--include=*.js"
+    "--include={lib,domain,${local.service_dir}}/",
+    "--include='*.js'"
   ]
 
   policy = {
