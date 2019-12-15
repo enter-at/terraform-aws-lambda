@@ -18,8 +18,8 @@ clean() {
 
 build() {
   pushd "${SOURCE_DIR}" >/dev/null || exit
-  # shellcheck disable=SC2086
-  rsync -Ravz ${RSYNC_PATTERN} --exclude="*.*" "$MODULE_NAME" "$DIST_DIR"
+  # shellcheck disable=SC2046
+  rsync -Ravz $(eval echo "$RSYNC_PATTERN") --exclude="*.*" "$MODULE_NAME" "$DIST_DIR"
   popd >/dev/null || exit
 }
 
