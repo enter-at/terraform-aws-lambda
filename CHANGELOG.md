@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.3.1...v1.4.0) (2019-12-15)
+
+
+### Features
+
+* **archive:** add configurable module name ([dcff7c6](https://github.com/enter-at/terraform-aws-lambda/commit/dcff7c67b671f9be75b305e4d4362f47dbe6f4b4))
+
 ## [1.3.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.3.0...v1.3.1) (2019-12-13)
 
 
