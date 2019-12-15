@@ -18,7 +18,8 @@ resource "null_resource" "build" {
   }
 
   provisioner "local-exec" {
-    command     = "${path.module}/build.sh"
+    command = "${path.module}/build.sh"
+
     environment = {
       SOURCE_DIR    = var.source_dir
       MODULE_NAME   = var.module_name
