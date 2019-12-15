@@ -75,7 +75,7 @@ module "lambda" {
 
   environment = {
     variables = {
-      SM_SERVICE_CONFIG = var.pfs_secrets_manager_secret.arn
+      SM_SERVICE_CONFIG = var.secrets_manager_secret.arn
     }
   }
 
