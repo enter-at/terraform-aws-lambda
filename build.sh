@@ -8,6 +8,7 @@ parse_environment_variables() {
   DIST_DIR=${DIST_DIR:?'DIST_DIR variable missing.'}
   SOURCE_DIR=${SOURCE_DIR:?'SOURCE_DIR variable missing.'}
   RSYNC_PATTERN=${RSYNC_PATTERN:?'RSYNC_PATTERN variable missing.'}
+  MODULE_NAME=${MODULE_NAME:?'MODULE_NAME variable missing.'}
 }
 
 clean() {
@@ -18,7 +19,7 @@ clean() {
 build() {
   pushd "${SOURCE_DIR}" >/dev/null || exit
   # shellcheck disable=SC2086
-  rsync -Ravz ${RSYNC_PATTERN} --exclude="*" --exclude="*.*" "." "$DIST_DIR"
+  rsync -Ravz ${RSYNC_PATTERN} --exclude="*.*" "$MODULE_NAME" "$DIST_DIR"
   popd >/dev/null || exit
 }
 

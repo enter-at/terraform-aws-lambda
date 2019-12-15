@@ -12,6 +12,12 @@ variable "source_dir" {
   description = "(Required) The location of the handler source code."
 }
 
+variable "module_name" {
+  type        = string
+  description = "(Optional) The location of the handler source code module. Defaults to '.'"
+  default     = "."
+}
+
 variable "description" {
   type        = string
   description = "(Optional) Description of what the Lambda function does."
