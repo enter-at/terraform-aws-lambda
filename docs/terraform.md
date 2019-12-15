@@ -11,6 +11,7 @@
 | handler | (Required) The function entrypoint in your code. | string | - | yes |
 | layers | (Optional) List of Lambda Layer Version ARNs (maximum of 5) to attach to the Lambda function. | list(string) | `null` | no |
 | memory_size | (Optional) Amount of memory in MB the Lambda function can use at runtime. Defaults to 128. | number | `128` | no |
+| module_name | (Optional) The location of the handler source code module. Defaults to '.' | string | `.` | no |
 | policy | (Optional) An additional policy to attach to the Lambda function role. | object | `null` | no |
 | reserved_concurrent_executions | (Optional) The amount of reserved concurrent executions for this Lambda function. | number | `null` | no |
 | rsync_pattern | (Optional) A list of rsync pattern to include or exclude files and directories. | list(string) | `<list>` | no |
