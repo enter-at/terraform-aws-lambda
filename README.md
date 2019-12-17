@@ -63,6 +63,12 @@ module "lambda" {
   source_dir    = var.source_dir
   runtime       = var.runtime
   layers        = var.layers
+  publish       = true
+
+  provisioned_concurrency_config = {
+    qualifier                         = aws_lambda_alias.production.name
+    provisioned_concurrent_executions = var.provisioned_concurrent_executions
+  }
 
   rsync_pattern = [
     "--include={lib,domain,${local.service_dir}}/",
@@ -90,6 +96,12 @@ module "lambda" {
   tags = {
     "Team" = "XYZ"
   }
+}
+
+resource "aws_lambda_alias" "production" {
+  function_name    = module.lambda.function_name
+  function_version = module.lambda.function_version
+  name             = "production"
 }
 ```
 
