@@ -113,6 +113,7 @@ module "lambda" {
 | memory_size | (Optional) Amount of memory in MB the Lambda function can use at runtime. Defaults to 128. | number | `128` | no |
 | module_name | (Optional) The location of the handler source code module. Defaults to '.' | string | `.` | no |
 | policy | (Optional) An additional policy to attach to the Lambda function role. | object | `null` | no |
+| provisioned_concurrent_executions | (Optional) Amount of capacity to allocate. Must be greater than or equal to 1. | number | `null` | no |
 | reserved_concurrent_executions | (Optional) The amount of reserved concurrent executions for this Lambda function. | number | `null` | no |
 | rsync_pattern | (Optional) A list of rsync pattern to include or exclude files and directories. | list(string) | `<list>` | no |
 | runtime | (Required) The identifier of the function's runtime. | string | - | yes |
@@ -129,6 +130,7 @@ module "lambda" {
 | arn | The Amazon Resource Name (ARN) identifying the Lambda function. |
 | function_name | The name identifying the Lambda function. |
 | function_timeout | The amount of time the Lambda function can run in seconds. |
+| function_version | The latest published version of the Lambda function. |
 | invoke_arn | The ARN to be used for invoking the Lambda function |
 | role_arn | The ARN of the IAM role created for the Lambda function |
 | role_name | The name of the IAM role created for the Lambda function |
