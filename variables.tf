@@ -51,7 +51,7 @@ variable "function_name" {
 variable "provisioned_concurrency_config" {
   type = object({
     provisioned_concurrent_executions = number
-    qualifier = string
+    qualifier                         = string
   })
 
   description = "(Optional) Lambda Provisioned Concurrency Configuration."
