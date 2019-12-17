@@ -48,9 +48,13 @@ variable "function_name" {
   description = "(Required) A unique name for the Lambda function."
 }
 
-variable "provisioned_concurrent_executions" {
-  type        = number
-  description = "(Optional) Amount of capacity to allocate. Must be greater than or equal to 1."
+variable "provisioned_concurrency_config" {
+  type = object({
+    provisioned_concurrent_executions = number
+    qualifier = string
+  })
+
+  description = "(Optional) Lambda Provisioned Concurrency Configuration."
   default     = null
 }
 
