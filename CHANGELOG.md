@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.8.0...v1.8.1) (2019-12-17)
+
+
+### Bug Fixes
+
+* **provisioned concurrency:** ensure version variable ([75fb52c](https://github.com/enter-at/terraform-aws-lambda/commit/75fb52c44d03016b159a5a5428e76fae2089a50e))
+
 # [1.8.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.7.0...v1.8.0) (2019-12-17)
 
 
