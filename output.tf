@@ -18,6 +18,11 @@ output "function_timeout" {
   value       = aws_lambda_function.main.timeout
 }
 
+output "function_version" {
+  description = "The latest published version of the Lambda function."
+  value       = aws_lambda_function.main.version
+}
+
 output "role_arn" {
   description = "The ARN of the IAM role created for the Lambda function"
   value       = aws_iam_role.main.arn
