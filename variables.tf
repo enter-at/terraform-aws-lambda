@@ -117,6 +117,12 @@ variable "force_detach_policies" {
   default     = false
 }
 
+variable "publish" {
+  type        = bool
+  description = "(Optional) Whether to publish creation/change as new Lambda function version. Defaults to false."
+  default     = false
+}
+
 variable "runtime" {
   type        = string
   description = "(Required) The identifier of the function's runtime."

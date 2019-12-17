@@ -35,6 +35,7 @@ resource "aws_lambda_function" "main" {
   runtime                        = var.runtime
   layers                         = var.layers
   timeout                        = var.timeout
+  publish                        = var.publish
   tags                           = var.tags
 
   filename         = data.archive_file.function.output_path
