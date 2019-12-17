@@ -82,7 +82,7 @@ resource "aws_lambda_function" "main" {
 }
 
 resource "aws_lambda_provisioned_concurrency_config" "main" {
-  count = var.provisioned_concurrent_executions == null ? 0 : 1
+  count = var.provisioned_concurrent_executions != null && var.publish ? 1 : 0
 
   function_name                     = aws_lambda_function.main.function_name
   qualifier                         = aws_lambda_function.main.version
