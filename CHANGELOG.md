@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.6.0...v1.7.0) (2019-12-17)
+
+
+### Features
+
+* **lambda:** add aws_lambda_provisioned_concurrency_config option ([71c8a12](https://github.com/enter-at/terraform-aws-lambda/commit/71c8a12893e2580061d647a2b360de7143751c24))
+
 # [1.6.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.5.0...v1.6.0) (2019-12-17)
 
 
