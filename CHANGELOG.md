@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.5.0...v1.6.0) (2019-12-17)
+
+
+### Features
+
+* **output:** expose lambda version ([2a7fefc](https://github.com/enter-at/terraform-aws-lambda/commit/2a7fefc067e2a6955bac24898b006521b1df008f))
+
 # [1.5.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.4.1...v1.5.0) (2019-12-15)
 
 
