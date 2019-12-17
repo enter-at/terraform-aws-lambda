@@ -79,3 +79,11 @@ resource "aws_lambda_function" "main" {
     }
   }
 }
+
+resource "aws_lambda_provisioned_concurrency_config" "main" {
+  count = var.provisioned_concurrent_executions == null ? 0 : 1
+
+  function_name                     = aws_lambda_function.main.function_name
+  qualifier                         = aws_lambda_function.main.version
+  provisioned_concurrent_executions = var.provisioned_concurrent_executions
+}

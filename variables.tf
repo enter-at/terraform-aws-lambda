@@ -48,6 +48,12 @@ variable "function_name" {
   description = "(Required) A unique name for the Lambda function."
 }
 
+variable "provisioned_concurrent_executions" {
+  type        = number
+  description = "(Optional) Amount of capacity to allocate. Must be greater than or equal to 1."
+  default     = null
+}
+
 variable "handler" {
   type        = string
   description = "(Required) The function entrypoint in your code."
