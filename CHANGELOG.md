@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.7.0...v1.8.0) (2019-12-17)
+
+
+### Features
+
+* **lambda:** add publish variable ([3e8d311](https://github.com/enter-at/terraform-aws-lambda/commit/3e8d311be90a9991c911261436520b4fe87f8621))
+
 # [1.7.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.6.0...v1.7.0) (2019-12-17)
 
 
