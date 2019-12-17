@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.8.1...v1.9.0) (2019-12-17)
+
+
+### Features
+
+* **provisioned_concurrency_config:** make qualifier configurable ([2517e03](https://github.com/enter-at/terraform-aws-lambda/commit/2517e03d12b13c89bea40385010d481c0a788f09))
+
 ## [1.8.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.8.0...v1.8.1) (2019-12-17)
 
 
