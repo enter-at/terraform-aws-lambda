@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       - name: readme/update
         shell: bash
@@ -27,7 +27,7 @@ jobs:
           make readme
 
       - name: Create Pull Request
-        uses: cloudposse/actions/github/create-pull-request@master
+        uses: peter-evans/create-pull-request@v2
         with:
           labels: automated pr
         env:
