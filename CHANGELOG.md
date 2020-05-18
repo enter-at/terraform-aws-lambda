@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.9.0...v1.10.0) (2020-05-18)
+
+
+### Features
+
+* **log group:** add retention variable ([b36ee07](https://github.com/enter-at/terraform-aws-lambda/commit/b36ee074784509b59ed2421fcb1d4ebe67bbacda))
+
 # [1.9.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.8.1...v1.9.0) (2019-12-17)
 
 
