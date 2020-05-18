@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.10.0...v1.10.1) (2020-05-18)
+
+
+### Bug Fixes
+
+* apply terraform validation rules ([ef25d96](https://github.com/enter-at/terraform-aws-lambda/commit/ef25d9652b5627cafa18cc679f9fe4cea34a7789))
+
 # [1.10.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.9.0...v1.10.0) (2020-05-18)
 
 
