@@ -149,3 +149,8 @@ variable "cloudwatch_log_subscription_filter" {
   description = "(Optional) A list of CloudWatch Logs subscription filter."
   default     = null
 }
+
+variable "cloudwatch_retention_in_days" {
+  default = null
+  description = "(Optional) Specifies the number of days you want to retain log events in the specified log group."
+}

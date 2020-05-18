@@ -12,8 +12,9 @@ locals {
 }
 
 resource "aws_cloudwatch_log_group" "main" {
-  name = local.lambda_log_group_name
-  tags = var.tags
+  name              = local.lambda_log_group_name
+  retention_in_days = var.cloudwatch_retention_in_days
+  tags              = var.tags
 }
 
 resource "aws_cloudwatch_log_subscription_filter" "main" {
@@ -23,6 +24,10 @@ resource "aws_cloudwatch_log_subscription_filter" "main" {
   name            = "${var.function_name}-${var.cloudwatch_log_subscription_filter[count.index].name}"
   filter_pattern  = var.cloudwatch_log_subscription_filter[count.index].filter_pattern
   destination_arn = var.cloudwatch_log_subscription_filter[count.index].destination_arn
+
+  depends_on = [
+    aws_cloudwatch_log_group.main
+  ]
 }
 
 resource "aws_lambda_function" "main" {
