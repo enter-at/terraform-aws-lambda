@@ -1,7 +1,7 @@
 name: Generate Readme
 
 on:
-  # Open a PR to update README on merge to master (as necessary)
+  # Open a PR to update README on merge to main (as necessary)
   push:
     branches:
       - main

@@ -54,7 +54,7 @@ usage: |-
 
   ```hcl
   module "lambda" {
-    source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
+    source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=main"
     function_name = "test-service"
     handler       = "service/handler"
     source_dir    = var.source_dir
@@ -73,7 +73,7 @@ usage: |-
   }
 
   module "lambda" {
-    source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=master"
+    source        = "git::https://github.com/enter-at/terraform-aws-lambda.git?ref=main"
     function_name = "test-service"
     handler       = "${local.service_dir}/handler"
     source_dir    = var.source_dir
@@ -123,8 +123,3 @@ usage: |-
 
 include:
   - "docs/terraform.md"
-
-# Contributors to this project
-contributors:
-  - name: "Steffen Leistner"
-    github: "sleistner"
