@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/enter-at/terraform-aws-lambda/compare/v2.0.0...v2.0.1) (2020-11-27)
+
+
+### Bug Fixes
+
+* downgrade terraform version ([263f6ce](https://github.com/enter-at/terraform-aws-lambda/commit/263f6cebba70434497200e1deb8afa2479dbf9a6))
+
 # [2.0.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.10.1...v2.0.0) (2020-11-27)
 
 
