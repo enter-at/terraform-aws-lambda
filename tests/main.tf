@@ -5,8 +5,8 @@ provider "aws" {
 module "lambda" {
   source        = "../"
   function_name = "test-service"
-  handler       = "service/handler"
-  source_dir    = "./"
+  handler       = "service/handler.handle"
+  source_dir    = "./src"
   runtime       = "nodejs10.x"
 
   rsync_pattern = [
