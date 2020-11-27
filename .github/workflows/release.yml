@@ -11,17 +11,16 @@ on:
 
 jobs:
   release:
-    name: release
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@master
+      - name: Run Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
         id: semantic
         with:
-          branch: master
+          branch: main
           extra_plugins: |
             @semantic-release/git
             @semantic-release/changelog
