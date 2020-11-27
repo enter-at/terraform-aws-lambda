@@ -19,7 +19,7 @@ jobs:
       - name: readme/update
         shell: bash
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_BOT_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GH_BOT_TOKEN }}"
         run: |
           make init
           make readme/deps
@@ -31,7 +31,7 @@ jobs:
           labels: |
             automated pr
             readme
-          token: ${{ secrets.GITHUB_BOT_TOKEN }}
+          token: ${{ secrets.GH_BOT_TOKEN }}
           commit-message: "docs(README): auto update all sections"
           title: Automatic Update of README.md
           body: |-

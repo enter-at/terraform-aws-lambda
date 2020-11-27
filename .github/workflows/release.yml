@@ -25,4 +25,4 @@ jobs:
             @semantic-release/git
             @semantic-release/changelog
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
