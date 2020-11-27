@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/enter-at/terraform-aws-lambda/compare/v1.10.1...v2.0.0) (2020-11-27)
+
+
+### Bug Fixes
+
+* update github token ([5fd8ad5](https://github.com/enter-at/terraform-aws-lambda/commit/5fd8ad5acbff20db0eec4954fd381ed20fec450e))
+* **workflow:** update release config" ([85d4e79](https://github.com/enter-at/terraform-aws-lambda/commit/85d4e79f067b95aca8682a10783c9012956a026b))
+* update release config ([c0ed570](https://github.com/enter-at/terraform-aws-lambda/commit/c0ed57061f8b09b9e6871ef35b52d7e761a1366f))
+* update release config ([5aafdc9](https://github.com/enter-at/terraform-aws-lambda/commit/5aafdc95031a25b5bfd86d595f69a9a8a3d57573))
+* update release config ([7eb5b30](https://github.com/enter-at/terraform-aws-lambda/commit/7eb5b30399eeae1b6200bfcab4e3a76e24208fb4))
+
+
+### Features
+
+* update terraform to version 0.13 ([fb83564](https://github.com/enter-at/terraform-aws-lambda/commit/fb8356453e7e19fef2fac0b0fc5845a3c467172a))
+
+
+### BREAKING CHANGES
+
+* terraform has been updated to version 0.13
+
 ## [1.10.1](https://github.com/enter-at/terraform-aws-lambda/compare/v1.10.0...v1.10.1) (2020-05-18)
 
 
